@@ -1,0 +1,13 @@
+import MetaTrader5 as mt5
+
+def portfolio_risk():
+
+    positions = mt5.positions_get()
+
+    total = len(positions) if positions else 0
+
+    if total > 5:
+
+        return False
+
+    return True
